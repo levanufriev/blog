@@ -1,0 +1,14 @@
+<div class="container" *ngIf="post">
+    <div class="card" style="max-width: 500px;margin: 0 auto;">
+        <img [src] = "post.featuredImageUrl" class="card-img-top">
+        <div class="card-body">
+            <h1 class="card-title">
+                {{ post.title }}
+            </h1>
+            <article class="card-text">
+                {{ post.summary }}
+            </article>
+            <a class="btn btn-primary" [routerLink]="['/post', post.id]">View Post</a>
+        </div>
+    </div>
+</div>
